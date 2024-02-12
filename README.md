@@ -1,1 +1,1 @@
-# doc.selenium-basics
+# doc-selenium-basics
