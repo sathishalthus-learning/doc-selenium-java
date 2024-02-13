@@ -1,21 +1,24 @@
 package selenium;
 
-import java.time.Duration;
-
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class S01_FirstScript {
-	//
-	public static void main(String[] args) {
-		//
-		WebDriver driver = new ChromeDriver();
+import static org.junit.Assert.assertEquals;
 
+import java.time.Duration;
+
+public class S02_FirstTest {
+	//
+	@Test
+	public void eightComponents() {
+		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.selenium.dev/selenium/web/web-form.html");
 
-		driver.getTitle();
+		String title = driver.getTitle();
+		assertEquals("Web form", title);
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
 
@@ -26,8 +29,10 @@ public class S01_FirstScript {
 		submitButton.click();
 
 		WebElement message = driver.findElement(By.id("message"));
-		message.getText();
+		String value = message.getText();
+		assertEquals("Received!", value);
 
 		driver.quit();
 	}
+
 }
