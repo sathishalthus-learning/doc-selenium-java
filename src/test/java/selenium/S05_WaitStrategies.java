@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-public class S04_WaitStrategies {
+public class S05_WaitStrategies {
 	//
 	 @Test
 	  public void implicit() {
