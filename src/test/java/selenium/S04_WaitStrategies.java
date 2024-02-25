@@ -2,17 +2,17 @@ package selenium;
 
 import java.time.Duration;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import junit.framework.Assert;
 
 public class S04_WaitStrategies {
 	//
@@ -27,6 +27,7 @@ public class S04_WaitStrategies {
 	    WebElement added = driver.findElement(By.id("box0"));
 
 	    Assert.assertEquals("redbox", added.getDomAttribute("class"));
+	    driver.quit();
 	  }
 	 //
 	@Test
@@ -34,7 +35,7 @@ public class S04_WaitStrategies {
 		WebDriver driver = new ChromeDriver();
 
 		driver.get("https://www.selenium.dev/selenium/web/dynamic.html");
-		WebElement revealed = driver.findElement(By.id("revealed"));
+		WebElement revealed = driver.findElement(By.id("revealed"));	
 		driver.findElement(By.id("reveal")).click();
 
 		Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(2));
@@ -42,6 +43,7 @@ public class S04_WaitStrategies {
 
 		revealed.sendKeys("Displayed");
 		Assert.assertEquals("Displayed", revealed.getDomProperty("value"));
+		driver.quit();
 	}
 
 	@Test
@@ -63,5 +65,6 @@ public class S04_WaitStrategies {
 		});
 
 		Assert.assertEquals("Displayed", revealed.getDomProperty("value"));
+		driver.quit();
 	}
 }
