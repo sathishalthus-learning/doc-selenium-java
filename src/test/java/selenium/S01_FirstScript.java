@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
+
 public class S01_FirstScript {
 	//
 	public static void main(String[] args) {
@@ -27,7 +29,8 @@ public class S01_FirstScript {
 
 		WebElement message = driver.findElement(By.id("message"));
 		message.getText();
-
+		
+		System.out.println(driver.getTitle());
 		driver.quit();
 	}
 }
