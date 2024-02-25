@@ -11,6 +11,7 @@ public class S03_BrowserOptions {
 	@Test
 	public void setPageLoadStrategyNormal() {
 		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.setBrowserVersion("120");
 		chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
 		WebDriver driver = new ChromeDriver(chromeOptions);
 		try {
@@ -24,6 +25,7 @@ public class S03_BrowserOptions {
 	@Test
 	public void setPageLoadStrategyEager() {
 		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.setBrowserVersion("120");
 		chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
 		WebDriver driver = new ChromeDriver(chromeOptions);
 		try {
@@ -37,6 +39,7 @@ public class S03_BrowserOptions {
 	@Test
 	public void setPageLoadStrategyNone() {
 		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.setBrowserVersion("120");
 		chromeOptions.setPageLoadStrategy(PageLoadStrategy.NONE);
 		WebDriver driver = new ChromeDriver(chromeOptions);
 		try {
