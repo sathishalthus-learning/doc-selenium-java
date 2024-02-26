@@ -7,19 +7,29 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class S11_BrowserInteractions {
 	//
 	
-	WebDriver driver = new ChromeDriver();
+
 	
 	//
 	@Test
 	public void getBrowserInformation() {
-		driver.getTitle();
-		driver.getCurrentUrl();
+		//
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://selenium.dev");
+		//
+		String title = driver.getTitle();
+		System.out.println(title);
+		//
+		String url = driver.getCurrentUrl();
+		System.out.println(url);
+		//
+		driver.quit();
 	}
 
 	//
 	@Test
 	public void browserNavigations() {
 		//Convenient
+		WebDriver driver = new ChromeDriver();
 		driver.get("https://selenium.dev");
 
 		//Longer way
@@ -28,5 +38,7 @@ public class S11_BrowserInteractions {
 		driver.navigate().back();
 		driver.navigate().forward();
 		driver.navigate().refresh();
+		//
+		driver.quit();
 	}
 }
