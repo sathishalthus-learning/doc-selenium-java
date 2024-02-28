@@ -17,7 +17,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.print.PrintOptions;
 import org.apache.commons.io.FileUtils;
 
-public class S14_Windows {
+public class S15_Windows {
 	//
 	//
 	@Test
