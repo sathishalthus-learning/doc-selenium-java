@@ -7,32 +7,33 @@ import java.util.Set;
 
 public class S13_Cookies {
 	//
-
-	WebDriver driver = new ChromeDriver();
-
+	//
 	@Test
 	public void addCookie() {
 		//
+		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.example.com");
 		driver.manage().addCookie(new Cookie("key", "value"));
-		driver.close();
+		driver.quit();
 	}
 
 	@Test
 	public void getNamedCookie() {
 		//
+		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.example.com");
 		driver.manage().addCookie(new Cookie("foo", "bar"));
 
 		// Get cookie details with named cookie 'foo'
 		Cookie cookie1 = driver.manage().getCookieNamed("foo");
 		System.out.println(cookie1);
-		driver.close();
+		driver.quit();
 	}
 
 	@Test
 	public void getAllCookies() {
 		//
+		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.example.com");
 		// Add few cookies
 		driver.manage().addCookie(new Cookie("test1", "cookie1"));
@@ -41,12 +42,13 @@ public class S13_Cookies {
 		// Get All available cookies
 		Set<Cookie> cookies = driver.manage().getCookies();
 		System.out.println(cookies);
-		driver.close();
+		driver.quit();
 	}
 
 	@Test
 	public void deleteCookie() {
 		//
+		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.example.com");
 		driver.manage().addCookie(new Cookie("test1", "cookie1"));
 		Cookie cookie1 = new Cookie("test2", "cookie2");
@@ -60,24 +62,26 @@ public class S13_Cookies {
 		 * object of current browsing context
 		 */
 		driver.manage().deleteCookie(cookie1);
-		driver.close();
+		driver.quit();
 	}
 
 	@Test
 	public void deleteAllCookies() {
 		//
+		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.example.com");
 		driver.manage().addCookie(new Cookie("test1", "cookie1"));
 		driver.manage().addCookie(new Cookie("test2", "cookie2"));
 
 		// deletes all cookies
 		driver.manage().deleteAllCookies();
-		driver.close();
+		driver.quit();
 	}
 
 	@Test
 	public void samesiteCookies() {
 		//
+		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.example.com");
 		Cookie cookie = new Cookie.Builder("key", "value").sameSite("Strict").build();
 		Cookie cookie1 = new Cookie.Builder("key", "value").sameSite("Lax").build();
@@ -85,6 +89,6 @@ public class S13_Cookies {
 		driver.manage().addCookie(cookie1);
 		System.out.println(cookie.getSameSite());
 		System.out.println(cookie1.getSameSite());
-		driver.close();
+		driver.quit();
 	}
 }
