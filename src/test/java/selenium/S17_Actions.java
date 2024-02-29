@@ -74,6 +74,8 @@ public class S17_Actions {
                 .perform();
 
         Assert.assertEquals("SeleniumSelenium!", textField.getAttribute("value"));
+        //
+        driver.quit();
 	}
 	
 	//
@@ -148,7 +150,7 @@ public class S17_Actions {
         new Actions(driver)
                 .dragAndDropBy(draggable2, finish.getX() - start.getX(), finish.getY() - start.getY())
                 .perform();
-        
-        
+       // 
+       driver.quit();
 	}
 }
