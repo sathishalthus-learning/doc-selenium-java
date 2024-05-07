@@ -79,7 +79,7 @@ public class S13_Cookies {
 	}
 
 	@Test
-	public void samesiteCookies() {
+	public void samesiteCookies() {	
 		//
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.example.com");

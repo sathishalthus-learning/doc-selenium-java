@@ -49,5 +49,21 @@ public class S03_BrowserOptions {
 			driver.quit();
 		}
 	}
+	
+	@Test
+	public void capabilities() {
+		ChromeOptions chromeOptions = new ChromeOptions();
+//		chromeOptions.setBrowserVersion("120");
+		chromeOptions.setCapability("browserName","chrome");
+		chromeOptions.setCapability("browserVersion", 120);
+		chromeOptions.setPageLoadStrategy(PageLoadStrategy.NONE);
+		WebDriver driver = new ChromeDriver(chromeOptions);
+		try {
+			// Navigate to Url
+			driver.get("https://selenium.dev");
+		} finally {
+			driver.quit();
+		}
+	}
 
 }
