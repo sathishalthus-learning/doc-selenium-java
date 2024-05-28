@@ -40,6 +40,7 @@ public class S05_WaitStrategies {
 
 		Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(2));
 		wait.until(d -> revealed.isDisplayed());
+		wait.until(null)
 
 		revealed.sendKeys("Displayed");
 		Assert.assertEquals("Displayed", revealed.getDomProperty("value"));
@@ -47,7 +48,7 @@ public class S05_WaitStrategies {
 	}
 
 	@Test
-	public void explicitWithOptions() {
+	public void fluentWait() {
 		WebDriver driver = new ChromeDriver();
 
 		driver.get("https://www.selenium.dev/selenium/web/dynamic.html");
@@ -63,8 +64,11 @@ public class S05_WaitStrategies {
 			revealed.sendKeys("Displayed");
 			return true;
 		});
+		
 
 		Assert.assertEquals("Displayed", revealed.getDomProperty("value"));
 		driver.quit();
 	}
+
+	
 }
