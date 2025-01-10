@@ -1,3 +1,3 @@
-# doc-selenium-basics
+# DOC-SELENIUM-JAVA
 
 followiing selenium.dev documnetation
