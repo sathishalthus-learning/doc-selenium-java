@@ -9,6 +9,7 @@ public class StringReplace {
 		String modifiedString = s.replaceAll("^[^\\d]+","");
 		System.out.println(modifiedString);
 				System.out.println(Double.parseDouble(modifiedString));
+				System.out.println("String replace");
 				
 
 	}
