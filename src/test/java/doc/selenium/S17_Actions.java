@@ -1,4 +1,4 @@
-package selenium;
+package doc.selenium;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -21,7 +21,7 @@ public class S17_Actions {
 		
 		//
 		//keyDown, keyUp
-        driver.get("https://www.selenium.dev/selenium/web/single_text_input.html");
+        driver.get("https://www.selenium.dev/doc.selenium/web/single_text_input.html");
         new Actions(driver)
 	        .keyDown(Keys.SHIFT)
 	        .sendKeys("a")
@@ -34,7 +34,7 @@ public class S17_Actions {
         
         //
         // sendKeysToActiveElement
-        driver.get("https://www.selenium.dev/selenium/web/single_text_input.html");
+        driver.get("https://www.selenium.dev/doc.selenium/web/single_text_input.html");
 
         new Actions(driver)
                 .sendKeys("abc")
@@ -45,7 +45,7 @@ public class S17_Actions {
         
         //
         // sendKeysToDesignatedElement
-        driver.get("https://www.selenium.dev/selenium/web/single_text_input.html");
+        driver.get("https://www.selenium.dev/doc.selenium/web/single_text_input.html");
         driver.findElement(By.tagName("body")).click();
 
         WebElement designatedElement = driver.findElement(By.id("textInput"));
@@ -57,7 +57,7 @@ public class S17_Actions {
         
         //
         // copyAndPaste
-        driver.get("https://www.selenium.dev/selenium/web/single_text_input.html");
+        driver.get("https://www.selenium.dev/doc.selenium/web/single_text_input.html");
 
         Keys cmdCtrl = Platform.getCurrent().is(Platform.MAC) ? Keys.COMMAND : Keys.CONTROL;
 
@@ -87,7 +87,7 @@ public class S17_Actions {
 		
 		//
 		//click and hold
-        driver.get("https://www.selenium.dev/selenium/web/single_text_input.html");
+        driver.get("https://www.selenium.dev/doc.selenium/web/single_text_input.html");
         
         WebElement clickandhold = driver.findElement(By.id("clickable"));
         new Actions(driver)

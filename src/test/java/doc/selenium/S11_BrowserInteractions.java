@@ -1,4 +1,4 @@
-package selenium;
+package doc.selenium;
 
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +14,7 @@ public class S11_BrowserInteractions {
 	public void getBrowserInformation() {
 		//
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://selenium.dev");
+		driver.get("https://doc.selenium.dev");
 		//
 		String title = driver.getTitle();
 		System.out.println(title);
@@ -30,10 +30,10 @@ public class S11_BrowserInteractions {
 	public void browserNavigations() {
 		//Convenient
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://selenium.dev");
+		driver.get("https://doc.selenium.dev");
 
 		//Longer way
-		driver.navigate().to("https://selenium.dev");
+		driver.navigate().to("https://doc.selenium.dev");
 		  
 		driver.navigate().back();
 		driver.navigate().forward();

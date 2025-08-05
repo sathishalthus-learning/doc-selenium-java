@@ -1,4 +1,4 @@
-package selenium;
+package doc.selenium;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ public class S08_FindingElements {
 	@Test
 	public void findingFirstElement() {
 		WebDriver driver = new ChromeDriver();
-		driver.get("D:\\workspaces\\github-imports\\selenium\\doc-selenium-basics\\src\\test\\resources\\selenium-files\\Finders.html");
+		driver.get("D:\\workspaces\\github-imports\\doc.selenium\\doc-doc.selenium-basics\\src\\test\\resources\\doc.selenium-files\\Finders.html");
 		
 		// evaluating entire DOM
 		WebElement vegetable = driver.findElement(By.className("tomatoes"));
@@ -36,7 +36,7 @@ public class S08_FindingElements {
 	@Test
 	public void findingAllMatchingElements() {
 		WebDriver driver = new ChromeDriver();
-		driver.get("D:\\workspaces\\github-imports\\selenium\\doc-selenium-basics\\src\\test\\resources\\selenium-files\\Finders.html");
+		driver.get("D:\\workspaces\\github-imports\\doc.selenium\\doc-doc.selenium-basics\\src\\test\\resources\\doc.selenium-files\\Finders.html");
 		
 		List<WebElement> plants = driver.findElements(By.tagName("li"));
 		System.out.println(plants);

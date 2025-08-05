@@ -1,4 +1,4 @@
-package selenium;
+package doc.selenium;
 
 import static org.junit.Assert.assertEquals;
 
@@ -17,7 +17,7 @@ public class S09_InteractingWithElements {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
 		// Navigate to Url
-		driver.get("https://www.selenium.dev/selenium/web/inputs.html");
+		driver.get("https://www.selenium.dev/doc.selenium/web/inputs.html");
 
 		// Click on the element
 		WebElement checkInput = driver.findElement(By.name("checkbox_input"));

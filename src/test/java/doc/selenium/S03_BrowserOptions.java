@@ -1,4 +1,4 @@
-package selenium;
+package doc.selenium;
 
 import java.time.Duration;
 
@@ -28,7 +28,7 @@ public class S03_BrowserOptions {
 		
 		try {
 			// Navigate to Url
-			driver.get("https://selenium.dev");
+			driver.get("https://doc.selenium.dev");
 		} finally {
 			driver.quit();
 		}
@@ -67,7 +67,7 @@ public class S03_BrowserOptions {
 		
 		try {
 			// Navigate to Url
-			driver.get("https://selenium.dev");
+			driver.get("https://doc.selenium.dev");
 		} finally {
 			driver.quit();
 		}

@@ -1,4 +1,4 @@
-package selenium;
+package doc.selenium;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -32,7 +32,7 @@ public class S07_Locators {
 	public void relativeLocators() {
 		//
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.selenium.dev/selenium/web/web-form.html");
+		driver.get("https://www.selenium.dev/doc.selenium/web/web-form.html");
 		//
 		WebElement textInputField = driver.findElement(RelativeLocator.with(By.name("my-text")).above(By.name("my-password")));
 		textInputField.sendKeys("hello");
@@ -44,7 +44,7 @@ public class S07_Locators {
 	public void chainingLocators() {
 		//
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.selenium.dev/selenium/web/web-form.html");
+		driver.get("https://www.selenium.dev/doc.selenium/web/web-form.html");
 		//
 		WebElement textInputField = driver.findElement(
 				RelativeLocator.with(By.name("my-text"))

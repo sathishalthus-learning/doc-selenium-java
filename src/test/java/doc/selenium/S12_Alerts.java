@@ -1,4 +1,4 @@
-package selenium;
+package doc.selenium;
 
 import java.time.Duration;
 
@@ -18,7 +18,7 @@ public class S12_Alerts {
 		public void simpleAlert() {
 			//
 			WebDriver driver = new ChromeDriver();
-			driver.get("https://www.selenium.dev/selenium/web/alerts.html");
+			driver.get("https://www.selenium.dev/doc.selenium/web/alerts.html");
 			
 			//Click the link to activate the alert
 			driver.findElement(By.id("empty-alert")).click();
@@ -37,7 +37,7 @@ public class S12_Alerts {
 		public void confirmAlert() {
 			//
 			WebDriver driver = new ChromeDriver();
-			driver.get("https://www.selenium.dev/selenium/web/alerts.html");
+			driver.get("https://www.selenium.dev/doc.selenium/web/alerts.html");
 			
 			//Click the link to activate the alert
 			driver.findElement(By.id("alert")).click();
@@ -60,7 +60,7 @@ public class S12_Alerts {
 		public void promptAlert() {
 			//
 			WebDriver driver = new ChromeDriver();
-			driver.get("https://www.selenium.dev/selenium/web/alerts.html");
+			driver.get("https://www.selenium.dev/doc.selenium/web/alerts.html");
 			
 			//Click the link to activate the alert
 			driver.findElement(By.id("prompt")).click();

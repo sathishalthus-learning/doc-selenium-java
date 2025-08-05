@@ -1,4 +1,4 @@
-package selenium;
+package doc.selenium;
 
 import java.io.File;
 
@@ -15,14 +15,14 @@ public class S06_FileUpload {
 	public void fileUploadTest() {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://the-internet.herokuapp.com/upload");
-		File uploadFile = new File("src/test/resources/selenium-snapshot.png");
+		File uploadFile = new File("src/test/resources/doc.selenium-snapshot.png");
 
 		WebElement fileInput = driver.findElement(By.cssSelector("input[type=file]"));
 		fileInput.sendKeys(uploadFile.getAbsolutePath());
 		driver.findElement(By.id("file-submit")).click();
 
 		WebElement fileName = driver.findElement(By.id("uploaded-files"));
-		Assert.assertEquals("selenium-snapshot.png", fileName.getText());
+		Assert.assertEquals("doc.selenium-snapshot.png", fileName.getText());
 	}
 
 }

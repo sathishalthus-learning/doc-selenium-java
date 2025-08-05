@@ -1,4 +1,4 @@
-package selenium;
+package doc.selenium;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -13,7 +13,7 @@ public class S14_Frames {
 	public void usingAWebelement() {
 		//
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.selenium.dev/selenium/web/click_frames.html");
+		driver.get("https://www.selenium.dev/doc.selenium/web/click_frames.html");
 		
 		//Store the web element
 		WebElement iframe = driver.findElement(By.id("source"));
@@ -32,7 +32,7 @@ public class S14_Frames {
 	public void usingNameOrId() {
 		//
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.selenium.dev/selenium/web/click_frames.html");
+		driver.get("https://www.selenium.dev/doc.selenium/web/click_frames.html");
 		
 		//Using the ID
 		driver.switchTo().frame("target");
@@ -52,7 +52,7 @@ public class S14_Frames {
 		
 		//
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.selenium.dev/selenium/web/click_frames.html");
+		driver.get("https://www.selenium.dev/doc.selenium/web/click_frames.html");
 		
 		// Switches to the second frame
 		driver.switchTo().frame(1);  
@@ -64,7 +64,7 @@ public class S14_Frames {
 	public void leavingFrame() {
 		//
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.selenium.dev/selenium/web/click_frames.html");
+		driver.get("https://www.selenium.dev/doc.selenium/web/click_frames.html");
 		
 		// Switches to the second frame
 		driver.switchTo().frame(1);  

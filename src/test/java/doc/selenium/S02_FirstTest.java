@@ -1,4 +1,4 @@
-package selenium;
+package doc.selenium;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -19,7 +19,7 @@ public class S02_FirstTest {
 		WebDriver driver = new ChromeDriver();
 		
 		//2. Take action on browser
-		driver.get("https://www.selenium.dev/selenium/web/web-form.html");
+		driver.get("https://www.selenium.dev/doc.selenium/web/web-form.html");
 
 		//3. Request browser information
 		String title = driver.getTitle();

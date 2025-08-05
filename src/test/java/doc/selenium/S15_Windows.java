@@ -1,4 +1,4 @@
-package selenium;
+package doc.selenium;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,7 +26,7 @@ public class S15_Windows {
 	public void windowsAndTabs() {
 		//
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.selenium.dev/selenium/web/window_switching_tests/page_with_frame.html");
+		driver.get("https://www.selenium.dev/doc.selenium/web/window_switching_tests/page_with_frame.html");
 		//
 		driver.getWindowHandle();
 		// Store the ID of the original window
@@ -68,7 +68,7 @@ public class S15_Windows {
 	public void windowManagement() {
 		//
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.selenium.dev/selenium/web/window_switching_tests/simple_page.html");
+		driver.get("https://www.selenium.dev/doc.selenium/web/window_switching_tests/simple_page.html");
 		//
 
 		// Access each dimension individually
@@ -122,7 +122,7 @@ public class S15_Windows {
 	public void screenshot() throws IOException {
 		//
 		WebDriver driver = new ChromeDriver();
-		driver.get("file:///D:/workspaces/selenium/Locators.html");
+		driver.get("file:///D:/workspaces/doc.selenium/Locators_.html");
 		//
 		// screenshot window
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -141,7 +141,7 @@ public class S15_Windows {
 	public void executingScripts() {
 		//
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.selenium.dev/selenium/web/javascriptPage.html");
+		driver.get("https://www.selenium.dev/doc.selenium/web/javascriptPage.html");
 		//
 		// Creating the JavascriptExecutor interface object by Type casting
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -163,7 +163,7 @@ public class S15_Windows {
 	public void printPage() {
 		//
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.selenium.dev/selenium/web/web-form.html");
+		driver.get("https://www.selenium.dev/doc.selenium/web/web-form.html");
 		//
 
 		driver.get("https://www.selenium.dev");

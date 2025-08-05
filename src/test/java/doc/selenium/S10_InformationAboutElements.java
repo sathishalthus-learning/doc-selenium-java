@@ -1,4 +1,4 @@
-package selenium;
+package doc.selenium;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -16,7 +16,7 @@ public class S10_InformationAboutElements {
 	public void isDisplayed() {
 		//
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.selenium.dev/selenium/web/inputs.html");
+		driver.get("https://www.selenium.dev/doc.selenium/web/inputs.html");
 		// isDisplayed
 		// Get boolean value for is element display
 		boolean isEmailVisible = driver.findElement(By.name("email_input")).isDisplayed();
@@ -30,7 +30,7 @@ public class S10_InformationAboutElements {
 	public void isEnabled() {
 		//
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.selenium.dev/selenium/web/inputs.html");
+		driver.get("https://www.selenium.dev/doc.selenium/web/inputs.html");
 		// isEnabled
 		// returns true if element is enabled else returns false
 		boolean isEnabledButton = driver.findElement(By.name("button_input")).isEnabled();
@@ -44,7 +44,7 @@ public class S10_InformationAboutElements {
 	public void isSelected() {
 		//
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.selenium.dev/selenium/web/inputs.html");
+		driver.get("https://www.selenium.dev/doc.selenium/web/inputs.html");
 		// isSelected
 		// returns true if element is checked else returns false
 		boolean isSelectedCheck = driver.findElement(By.name("checkbox_input")).isSelected();
@@ -58,7 +58,7 @@ public class S10_InformationAboutElements {
 	public void getTagName() {
 		//
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.selenium.dev/selenium/web/inputs.html");
+		driver.get("https://www.selenium.dev/doc.selenium/web/inputs.html");
 		// TagName
 		// returns TagName of the element
 		String tagNameInp = driver.findElement(By.name("email_input")).getTagName();
@@ -72,7 +72,7 @@ public class S10_InformationAboutElements {
 	public void getSizeAndPosition() {
 		//
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.selenium.dev/selenium/web/inputs.html");
+		driver.get("https://www.selenium.dev/doc.selenium/web/inputs.html");
 		// GetRect
 		// Returns height, width, x and y coordinates referenced element
 		Rectangle res = driver.findElement(By.name("range_input")).getRect();
@@ -87,7 +87,7 @@ public class S10_InformationAboutElements {
 	public void getCSSValue() {
 		//
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.selenium.dev/selenium/web/inputs.html");
+		driver.get("https://www.selenium.dev/doc.selenium/web/inputs.html");
 		// Retrieves the computed style property 'font-size' of field
 		String cssValue = driver.findElement(By.name("color_input")).getCssValue("font-size");
 		assertEquals(cssValue, "13.3333px");
@@ -100,7 +100,7 @@ public class S10_InformationAboutElements {
 	public void getTextContent() {
 		//
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.selenium.dev/selenium/web/inputs.html");
+		driver.get("https://www.selenium.dev/doc.selenium/web/inputs.html");
 		// GetText
 		// Retrieves the text of the element
 		String text = driver.findElement(By.tagName("h1")).getText();
@@ -114,7 +114,7 @@ public class S10_InformationAboutElements {
 	public void getAttributesAndProperties() {
 		//
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.selenium.dev/selenium/web/inputs.html");
+		driver.get("https://www.selenium.dev/doc.selenium/web/inputs.html");
 		// FetchAttributes
 		// identify the email text box
 		WebElement emailTxt = driver.findElement(By.name(("email_input")));

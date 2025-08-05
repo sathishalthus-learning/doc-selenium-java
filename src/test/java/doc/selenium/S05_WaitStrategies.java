@@ -1,4 +1,4 @@
-package selenium;
+package doc.selenium;
 
 import java.time.Duration;
 
@@ -21,7 +21,7 @@ public class S05_WaitStrategies {
 		 WebDriver driver = new ChromeDriver();
 
 	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-	    driver.get("https://www.selenium.dev/selenium/web/dynamic.html");
+	    driver.get("https://www.selenium.dev/doc.selenium/web/dynamic.html");
 	    driver.findElement(By.id("adder")).click();
 
 	    WebElement added = driver.findElement(By.id("box0"));
@@ -34,13 +34,12 @@ public class S05_WaitStrategies {
 	public void explicit() {
 		WebDriver driver = new ChromeDriver();
 
-		driver.get("https://www.selenium.dev/selenium/web/dynamic.html");
+		driver.get("https://www.selenium.dev/doc.selenium/web/dynamic.html");
 		WebElement revealed = driver.findElement(By.id("revealed"));	
 		driver.findElement(By.id("reveal")).click();
 
 		Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(2));
 		wait.until(d -> revealed.isDisplayed());
-		wait.until(null)
 
 		revealed.sendKeys("Displayed");
 		Assert.assertEquals("Displayed", revealed.getDomProperty("value"));
@@ -51,7 +50,7 @@ public class S05_WaitStrategies {
 	public void fluentWait() {
 		WebDriver driver = new ChromeDriver();
 
-		driver.get("https://www.selenium.dev/selenium/web/dynamic.html");
+		driver.get("https://www.selenium.dev/doc.selenium/web/dynamic.html");
 		WebElement revealed = driver.findElement(By.id("revealed"));
 		driver.findElement(By.id("reveal")).click();
 
