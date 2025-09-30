@@ -1,5 +1,5 @@
 
-spackage playground;
+package playground;
 
 public class StringReplace {
 

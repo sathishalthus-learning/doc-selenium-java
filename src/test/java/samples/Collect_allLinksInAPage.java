@@ -1,7 +1,9 @@
 package samples;
 
 import java.time.Duration;
+import java.util.Collections;
 import java.util.List;
+import java.util.TreeMap;
 import java.util.stream.Collectors;
 
 import org.openqa.selenium.By;
@@ -27,6 +29,8 @@ public class Collect_allLinksInAPage {
 		List<String> hrefs = links.stream().map(link->link.getAttribute("href")).collect(Collectors.toList());
 		
 		hrefs.forEach(System.out::println);
+		
+//		TreeMap<Integer, String> reverseMap = new TreeMap<>(Collections.reverseOrder());
 		
 		driver.quit();
 		
