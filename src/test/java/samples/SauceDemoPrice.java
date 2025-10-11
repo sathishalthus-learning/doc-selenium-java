@@ -36,16 +36,7 @@ public class SauceDemoPrice {
 		
 		
 		
-//		priceItems.forEach(e->{
-//			
-//			
-//			System.out.println(e.getText().substring(1));
-		
-		
-		Assert.asserequals
-//		});
-		
-		driver.close();
+
 		driver.quit();
 		
 		
